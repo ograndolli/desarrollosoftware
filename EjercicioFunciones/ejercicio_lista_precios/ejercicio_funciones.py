@@ -55,7 +55,15 @@ mostrar_productos(productos)
 
 #TODO3 y TODO4
 
-#def calcular_precio_actualizado(aumento):
+
+def calcular_precio_actualizado(a, p):
+    pact=(p*a/100)+p
+    return(pact)
 
 
-#aumento=float(input("Ingrese el porcentaje de aumento: "))
+aumento=float(input("Ingrese el porcentaje de aumento: "))
+precio=float(input("Ingrese el precio actual: "))
+
+pactual=calcular_precio_actualizado(aumento, precio)
+
+print(f"El nuevo precio con el aumento es: {pactual}")
