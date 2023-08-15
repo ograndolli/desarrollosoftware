@@ -11,43 +11,52 @@ Elija una opción:"""
 
 def suma(vu, vd):
     s=v1+v2
+    print(f"suma {s}")
     return (s)
 
 def resta(vu, vd):
-    r=v1+v2
+    r=v1-v2
+    print(f"Resta{r}")
+    return (r)
 
 def multiplicacion(vu, vd):
     m=v1*v2
+    print(f"multiplicacion {m}")
     return(m)
 
 def division(vu, vd):
     d=v1/v2
+    print(f"division {d}")
     return (d)
 
 
 opc=int(input("Elija una opcion: "))
+if opc==1:
+    v1=float(input("Ingrese el valor 1: "))
+else:
+    print("Error, tienen que ser la op 1")
 
-while(opc!=7):
-    if opc==1:
-        v1=float(input("Ingrese el valor 1: "))
-    if opc==2: 
-        v2=float(input("Ingrese el valor 2: "))
-    else: 
-        print("Error")
-    if opc==3: 
-        s=suma(v1,v2)
-    else: 
-        print("Error")
-    if opc==4:
-        r=resta(v1, v2)
-    else:
-        print("Error")
-    if opc==5:
-        m=multiplicacion(v1, v2)
-    else:
-        print("Error")
-    if opc==6:
-        d=division(v1, v2)
+opc=int(input("Elija una opcion: "))
+if opc==2: 
+    v2=float(input("Ingrese el valor 2: "))
+else: 
+    print("Error, tiene que ser la op 2")
+
+opc=int(input("Elija una opcion: "))
+if opc==3: 
+    s=suma(v1,v2)
+
+opc=int(input("Elija una opcion: "))
+if opc==4:
+    r=resta(v1, v2)
+
+opc=int(input("Elija una opcion: "))
+if opc==5:
+    m=multiplicacion(v1, v2)
+
+opc=int(input("Elija una opcion: "))
+if opc==6:
+    d=division(v1, v2)
     
 
 
