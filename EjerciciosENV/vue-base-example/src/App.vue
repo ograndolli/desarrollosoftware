@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Autores class= "primero"/>
-    <Libros class="primero"/>
+    <Libros class="segundo"/>
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 /* eslint-disable */
 
 import Libros from './components/Libros'
+import Autores from './components/Autores'
 
 export default {
   name: 'App',
@@ -21,13 +22,13 @@ export default {
 
 <style>
 .primero{
-  background-color: aqua;
+  background-color:#DCC3FF;
   padding: 2%;
   margin: 2%;
 }
 
 .segundo{
-  background-color: rgb(255, 164, 228);
+  background-color: #DCC3FF;
   padding: 2%;
   margin: 2%;
 }

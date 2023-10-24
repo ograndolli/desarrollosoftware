@@ -1,16 +1,15 @@
 <template>
     <div id="app">
-        <h1> Autores de Lbros </h1>
-        <div> 
+        <h1> Autores de Libros </h1>
+        <div>
             <h2> Cargar Autor </h2>
             <input v-model="nuevoAutor" @input="resetMessage" />
             <button @click="agregarAutor"> Agregar autor</button>
             <p class="message"> {{ message }}</p>
         </div>
-
-        <div> 
+        <div>
             <h2> Autores </h2>
-            <ul> 
+            <ul>
                 <li v-for="autor in autores" :key="autor.id">
                 {{ autor.nombre }}
                 </li>
@@ -20,16 +19,17 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 /* eslint-disable */
-new Vue({
-    el: "#app",
-    data: {
-        autores: [],
-        nuevoAutor: "",
-        message: "",
-        autorId: 1,
+import axios from 'axios'
+
+export default {
+    data: function (){
+        return{
+            autores: [],
+            nuevoAutor: "",
+            message: "",
+            autorId: 1, 
+        } 
     },
     mounted(){
         this.cargarAutores();
@@ -69,7 +69,7 @@ new Vue({
 
     },
 
-});
+}
 
 </script>
 
