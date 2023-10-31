@@ -41,12 +41,14 @@ export default {
                 return;
             }  
             
-            axios.post("https://localhost:8000/api/views.py/autores/")
-            axios.then((response) => {
-                this.autores.push({
-                    id: response.data.id,
-                    nombre: this.nuevoAutor,
-                });
+            axios.post("http://localhost:8000/autores/",{
+                nombre: this.nuevoAutor, 
+                biografia: 'Ejemplo de biografia',
+                fecha_nacimiento: '2018-10-20',
+                fecha_defuncion: '2018-10-20',
+            })
+            .then((response) => {
+                this.cargarAutores()
                 this.nuevoAutor= "";
             })
 
@@ -58,8 +60,8 @@ export default {
             this.message = "";
         },
         cargarAutores(){
-            axios.get("https://localhost:8000/api/views.py/autores/")
-            axios.then((response) => {
+            axios.get("http://localhost:8000/autores/")
+            .then((response) => {
                 this.autores = response.data;
             })
             .catch((error) => {

@@ -29,11 +29,11 @@ export default {
     },
     methods: {
         cargarLibros(){
-            axios.get("https://localhost:8000/api/views.py/libros/")
-            axios.then((response) => {
+            axios.get("http://localhost:8000/libros/")
+            .then((response) => {
                 this.libros = response.data;
             })
-            axios.catch((error) => {
+            .catch((error) => {
                 console.error("Error al cargar libros: " + error); 
             });
         },
